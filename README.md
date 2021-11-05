@@ -1,69 +1,61 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+<!-- @format -->
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# Finlex Customer Service
 
 ## Installation
 
-```bash
-$ npm install
-```
+Install [Node](https://nodejs.org/en/) & [MySql](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
 
-## Running the app
+## Usage
 
-```bash
-# development
-$ npm run start
+After installation, clone the repository and run the following commands in terminal
 
-# watch mode
-$ npm run start:dev
+    - cd task-management-nestjs && npm install
 
-# production mode
-$ npm run start:prod
-```
+##Database Connection
+
+    - SequalizeJs (ORM) is being used.
+    - Create a new database with the name of finlex in mySql.
+    - Create .env file in finlex-task folder and add the following environment variables.
+
+      DB_HOST={YOUR_LOCALHOST_URL}
+      DB_USER={YOUR_DB_USERNAME}
+      DB_PASSWORD={YOUR_DB_PASSWORD}
+      DB_DATABASE={YOUR_DB_NAME}
+
+    - Note: Once you provide the correct credentials, a new table with respecitve columns will be created automatically with the name of products.
+
+## Run Server
+
+Run the following commands to run server
+
+- npm start
+
+  - Node - http://localhost:3000 (This should start the Client side as well.
 
 ## Test
 
-```bash
-# unit tests
-$ npm run test
+Run the following commands to run test cases
 
-# e2e tests
-$ npm run test:e2e
+- npm test
 
-# test coverage
-$ npm run test:cov
-```
+## Architecture
 
-## Support
+The backend has been developed by following the MVC Architecture. MVC is an architectural pattern consisting of three parts: Model, View, Controller. Model: Handles data logic. View: It displays the information from the model to the user. Controller: It controls the data flow into a model object and updates the view whenever data changes.
+Once the client app is ready, Client will accept data from Server, and server will send data back to the client.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Code Format & Linters used
 
-## License
+     - EsLint
+     - Prettier
 
-  Nest is [MIT licensed](LICENSE).
+## Tools and Technologies
+
+    - Node ^14
+    - NestJs
+    - MySql
+    - Jest
+    - Prettier
+    - SequalizeJs, TypeOrm
+    - Heroku
+    - PostgreSql for production setup
